@@ -53,7 +53,7 @@ const Home = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative mx-auto w-32 h-32 rounded-full overflow-hidden bg-gradient-to-r from-primary to-primary/60 shadow-2xl"
           >
-            <img src="./images/1755082535332.jpg" alt="Mohan M" className="object-cover w-full h-full" />
+            <img src="./images/profile.png" alt="Mohan M" className="object-cover w-full h-full" />
           </motion.div>
 
           <motion.h1 className="text-4xl md:text-6xl font-bold text-foreground">
