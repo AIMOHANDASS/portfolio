@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Eye, Shield, ShoppingCart } from 'lucide-react';
+import { ExternalLink, Eye, Shield, ShoppingCart, BarChart3, Database } from 'lucide-react';
 import { useState } from 'react';
 
 const Projects = () => {
@@ -48,6 +48,37 @@ const Projects = () => {
         'Fast performance',
         'SEO optimized'
       ]
+    },
+
+    // 🔹 Project 4 – VillageMart
+    {
+      title: 'VillageMart – Local E-commerce Platform',
+      description: 'A full-stack e-commerce platform for village users to order groceries and garlands, with admin dashboard, order tracking, and UPI payments.',
+      technologies: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB', 'UPI Payments'],
+      icon: <ShoppingCart className="w-6 h-6" />,
+      color: 'from-purple-500 to-indigo-500',
+      link: 'https://villagesmart.in', // change if needed
+      features: [
+        'User & Admin authentication',
+        'Product management dashboard',
+        'UPI payments integration',
+        'Order tracking & delivery status'
+      ]
+    },
+
+    // 🔹 Project 5 – NSE DataHub
+    {
+      title: 'NSE DataHub & Trading Analytics Platform',
+      description: 'An end-to-end platform to aggregate NSE market data, backtest SMA/EMA strategies with SL/TP, visualize KPIs, and export analytics reports.',
+      technologies: ['Python', 'Pandas', 'Streamlit', 'MySQL', 'Plotly', 'yFinance'],
+      icon: <BarChart3 className="w-6 h-6" />,
+      color: 'from-orange-500 to-amber-500',
+      features: [
+        'Multi-stock NSE data aggregation',
+        'SMA/EMA backtesting with SL/TP',
+        'Interactive analytics dashboard',
+        'CSV/PDF report exports'
+      ]
     }
   ];
 
@@ -77,7 +108,7 @@ const Projects = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Showcasing innovative solutions in AI, machine learning, and web development
+            Showcasing innovative solutions in AI, machine learning, full-stack development, and trading analytics
           </p>
         </motion.div>
 
@@ -89,18 +120,9 @@ const Projects = () => {
           className="grid lg:grid-cols-3 md:grid-cols-2 gap-8"
         >
           {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              variants={fadeInUp}
-              className="relative"
-            >
-              <motion.div
-                variants={cardVariants}
-                initial="initial"
-                animate="expanded"
-                className="overflow-hidden"
-              >
-                <Card 
+            <motion.div key={project.title} variants={fadeInUp} className="relative">
+              <motion.div variants={cardVariants} initial="initial" animate="expanded" className="overflow-hidden">
+                <Card
                   className="border-0 shadow-lg bg-background"
                   onMouseEnter={() => setActiveCard(index)}
                   onMouseLeave={() => setActiveCard(null)}
@@ -171,8 +193,6 @@ const Projects = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        
       </div>
     </section>
   );
