@@ -118,7 +118,7 @@ const Home = () => {
 
             {/* Download Button */}
             <a
-              href="./images/mohanresume12.pdf"
+              href="./images/mohanresume123.pdf"
               download="Mohan_M_Resume.pdf"
               className="absolute top-4 left-4"
             >
@@ -130,7 +130,7 @@ const Home = () => {
 
             {/* PDF Viewer */}
             <iframe
-              src="./images/mohanresume12.pdf"
+              src="./images/mohanresume123.pdf"
               className="w-full h-full mt-15"
               title="Resume PDF"
             ></iframe>
